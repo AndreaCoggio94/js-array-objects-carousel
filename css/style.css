@@ -41,6 +41,14 @@ main {
   align-items: center;
 }
 
+.hidden {
+  display: none;
+}
+
+.select {
+  display: flex;
+}
+
 /* * carousel */
 
 .carousel-container {
@@ -52,6 +60,7 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
   flex-direction: column;
   height: 100%;
   text-align: end;

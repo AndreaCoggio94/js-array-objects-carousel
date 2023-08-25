@@ -3,6 +3,8 @@ const carouselBig = document.getElementById("carousel-big");
 // const for arrows
 const topArrow = document.getElementById("top-slider");
 const bottomArrow = document.getElementById("bottom-slider");
+// const to select carousel items
+const carouselBigItem = document.getElementsByClassName("carousel-img");
 
 // * const to create carousel
 const images = [
@@ -43,11 +45,16 @@ for (let object of images) {
   carouselImage(gameInfo[0], gameInfo[1], gameInfo[2]);
 }
 
+// * showing first option
+
+carouselBigItem[0].classList.remove("hidden");
+carouselBigItem[0].classList.add("select");
+
 // * function to genere carousel image
 
 function carouselImage(img, title, description) {
   const carouselCard = document.createElement("div");
-  carouselCard.classList.add("carousel-img", "d-flex");
+  carouselCard.classList.add("carousel-img", "hidden");
   carouselCard.innerHTML = ` 
   <h2>${title}</h2>
   <p>${description}</p>
