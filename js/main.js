@@ -40,31 +40,21 @@ for (let object of images) {
   for (let index in object) {
     gameInfo.push(object[index]);
   }
-  console.log(gameInfo);
+  carouselImage(gameInfo[0], gameInfo[1], gameInfo[2]);
 }
 
-// * function to genere card incomplete
+// * function to genere carousel image
 
-let card = carouselImage();
-
-carouselBig.append(card);
-
-function carouselImage() {
+function carouselImage(img, title, description) {
   const carouselCard = document.createElement("div");
   carouselCard.classList.add("carousel-img", "d-flex");
-  carouselCard.innerHTML = `
-  
-  <h2>Lorem ipsum dolor sit.</h2>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia rem eveniet
-    animi reiciendis impedit consequuntur cum asperiores natus ratione? Alias
-    nemo voluptatibus nisi magnam vitae quis, sapiente minima ab amet?
-  </p>
-
+  carouselCard.innerHTML = ` 
+  <h2>${title}</h2>
+  <p>${description}</p>
     `;
-  carouselCard.style.backgroundImage = ` url("/img/01.webp") `;
+  carouselCard.style.backgroundImage = ` url("/${img}") `;
 
-  return carouselCard;
+  carouselBig.append(carouselCard);
 }
 
 // ! functions to make
