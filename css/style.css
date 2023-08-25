@@ -31,3 +31,16 @@
   margin: 0;
   padding: 0;
 }
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-container {
+  width: 80vw;
+  height: 60vh;
+  display: flex;
+}
