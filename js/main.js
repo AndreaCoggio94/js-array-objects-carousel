@@ -64,8 +64,40 @@ function carouselImage(img, title, description) {
   carouselBig.append(carouselCard);
 }
 
-// ! functions to make
+// * function to add click event to the buttons
 
-topArrow.addEventListener("click", function () {});
+let carouselIndex = 0;
 
-bottomArrow.addEventListener("click", function () {});
+topArrow.addEventListener("click", function () {
+  if (carouselIndex > carouselBigItem.length) {
+    removeCard(carouselIndex);
+    carouselIndex--;
+    changeCard(carouselIndex);
+  }
+  //   else {
+  //   }
+});
+
+bottomArrow.addEventListener("click", function () {
+  if (carouselIndex < carouselBigItem.length - 1) {
+    removeCard(carouselIndex);
+    console.log("prima " + carouselIndex);
+    carouselIndex++;
+    console.log("dopo " + carouselIndex);
+    changeCard(carouselIndex);
+  } else {
+    removeCard(carouselIndex);
+    carouselIndex = 0;
+    changeCard(carouselIndex);
+  }
+});
+
+function removeCard(index) {
+  carouselBigItem[index].classList.remove("select");
+  carouselBigItem[index].classList.add("hidden");
+}
+
+function changeCard(index) {
+  carouselBigItem[index].classList.add("select");
+  carouselBigItem[index].classList.remove("hidden");
+}
