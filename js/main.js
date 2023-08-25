@@ -1,3 +1,5 @@
+// ** Global
+
 // const to get big carousel
 const carouselBig = document.getElementById("carousel-big");
 // const for arrows
@@ -5,6 +7,10 @@ const topArrow = document.getElementById("top-slider");
 const bottomArrow = document.getElementById("bottom-slider");
 // const to select carousel items
 const carouselBigItem = document.getElementsByClassName("carousel-img");
+
+// * carousel Index
+
+let carouselIndex = 0;
 
 // * const to create carousel
 const images = [
@@ -66,24 +72,22 @@ function carouselImage(img, title, description) {
 
 // * function to add click event to the buttons
 
-let carouselIndex = 0;
-
 topArrow.addEventListener("click", function () {
-  if (carouselIndex > carouselBigItem.length) {
+  if (carouselIndex === 0) {
+    removeCard(carouselIndex);
+    carouselIndex = carouselBigItem.length - 1;
+    changeCard(carouselIndex);
+  } else {
     removeCard(carouselIndex);
     carouselIndex--;
     changeCard(carouselIndex);
   }
-  //   else {
-  //   }
 });
 
 bottomArrow.addEventListener("click", function () {
   if (carouselIndex < carouselBigItem.length - 1) {
     removeCard(carouselIndex);
-    console.log("prima " + carouselIndex);
     carouselIndex++;
-    console.log("dopo " + carouselIndex);
     changeCard(carouselIndex);
   } else {
     removeCard(carouselIndex);
