@@ -1,5 +1,8 @@
 // const to get big carousel
 const carouselBig = document.getElementById("carousel-big");
+// const for arrows
+const topArrow = document.getElementById("top-slider");
+const bottomArrow = document.getElementById("bottom-slider");
 
 // * const to create carousel
 const images = [
@@ -31,7 +34,7 @@ const images = [
 ];
 
 let card = carouselImage();
-console.log(card);
+
 carouselBig.append(card);
 
 function carouselImage() {
@@ -48,5 +51,12 @@ function carouselImage() {
 
     `;
   carouselCard.style.backgroundImage = ` url("/img/01.webp") `;
+
   return carouselCard;
 }
+
+// ! functions to make
+
+topArrow.addEventListener("click", function () {});
+
+bottomArrow.addEventListener("click", function () {});
