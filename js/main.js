@@ -33,6 +33,18 @@ const images = [
   },
 ];
 
+// * for cycle to get elements
+
+for (let object of images) {
+  const gameInfo = [];
+  for (let index in object) {
+    gameInfo.push(object[index]);
+  }
+  console.log(gameInfo);
+}
+
+// * function to genere card incomplete
+
 let card = carouselImage();
 
 carouselBig.append(card);
