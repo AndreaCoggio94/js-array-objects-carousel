@@ -36,7 +36,7 @@
 
 main {
   height: 100vh;
-  display: flex;
+
   justify-content: center;
   align-items: center;
 }
@@ -46,14 +46,23 @@ main {
 .carousel-container {
   width: 80vw;
   height: 60vh;
-  display: flex;
 }
 
-.carousel-big {
-  background-image: url("/img/01.webp");
+#carousel-big {
+  /* background-image: url("/img/01.webp"); */
+}
+
+.carousel-img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  flex-direction: column;
+  height: 100%;
+  text-align: end;
+  align-items: end;
+  justify-content: flex-end;
+  padding: 1rem;
+  color: var(--white);
 }
 
 .carousel-slider {

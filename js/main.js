@@ -1,5 +1,7 @@
-console.log("Hello world");
+// const to get big carousel
+const carouselBig = document.getElementById("carousel-big");
 
+// * const to create carousel
 const images = [
   {
     image: "img/01.webp",
@@ -27,3 +29,24 @@ const images = [
     text: "Marvel's Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.",
   },
 ];
+
+let card = carouselImage();
+console.log(card);
+carouselBig.append(card);
+
+function carouselImage() {
+  const carouselCard = document.createElement("div");
+  carouselCard.classList.add("carousel-img", "d-flex");
+  carouselCard.innerHTML = `
+  
+  <h2>Lorem ipsum dolor sit.</h2>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia rem eveniet
+    animi reiciendis impedit consequuntur cum asperiores natus ratione? Alias
+    nemo voluptatibus nisi magnam vitae quis, sapiente minima ab amet?
+  </p>
+
+    `;
+  carouselCard.style.backgroundImage = ` url("/img/01.webp") `;
+  return carouselCard;
+}
