@@ -51,3 +51,9 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.carousel-slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
