@@ -112,7 +112,8 @@ function changeCard(index) {
 // ** Thumbnails
 
 for (let object of images) {
-  createThumbnail(object.image);
+  let thumbnailCreated = createThumbnail(object.image);
+  carouselSmall.append(thumbnailCreated);
 }
 
 function createThumbnail(img) {
@@ -120,9 +121,10 @@ function createThumbnail(img) {
   Thumbnail.classList.add("small-thumbnail");
   Thumbnail.style.backgroundImage = ` url("/${img}") `;
 
-  this.addEventListener("click", function () {});
-
-  carouselSmall.append(Thumbnail);
+  Thumbnail.addEventListener("click", function () {
+    console.log("click");
+  });
+  return Thumbnail;
 }
 
 // * showing first option
