@@ -54,6 +54,7 @@ main {
 .carousel-container {
   width: 80vw;
   height: 60vh;
+  position: relative;
 }
 
 .carousel-img {
@@ -70,18 +71,35 @@ main {
   color: var(--white);
 }
 
-.carousel-slider {
+/* * carousel-thumbnail */
+
+.carousel-thumbnail {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 /* * sliders */
 
+.slider-container {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  z-index: 1;
+}
+
 .slider {
   background-color: rgba(0, 0, 0, 0);
   height: 4rem;
+  width: 100%;
   border: none;
+  display: block;
+  text-align: center;
+}
+
+.slider-bottom {
+  position: absolute;
+  bottom: 0;
 }
 
 .slider i {

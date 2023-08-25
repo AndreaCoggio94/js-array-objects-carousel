@@ -12,11 +12,11 @@ const carouselBigItem = document.getElementsByClassName("carousel-img");
 
 let carouselIndex = 0;
 
-// * const to create carousel
+// * const to generate carousel from
 const images = [
   {
     image: "img/01.webp",
-    title: "Marvel's Spiderman Miles Morale",
+    title: "Marvel's Spiderman Miles Morales",
     text: "Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.",
   },
   {
@@ -96,10 +96,14 @@ bottomArrow.addEventListener("click", function () {
   }
 });
 
+// function to remove card
+
 function removeCard(index) {
   carouselBigItem[index].classList.remove("select");
   carouselBigItem[index].classList.add("hidden");
 }
+
+// function to change card
 
 function changeCard(index) {
   carouselBigItem[index].classList.add("select");
