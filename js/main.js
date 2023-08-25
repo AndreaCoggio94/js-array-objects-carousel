@@ -2,11 +2,15 @@
 
 // const to get big carousel
 const carouselBig = document.getElementById("carousel-big");
+// const to get small carousel alias thumbnail
+const carouselSmall = document.getElementById("carousel-small");
 // const for arrows
 const topArrow = document.getElementById("top-slider");
 const bottomArrow = document.getElementById("bottom-slider");
 // const to select carousel items
 const carouselBigItem = document.getElementsByClassName("carousel-img");
+// const to select thumbnail items
+const thumbnailItem = document.getElementsByClassName("small-thumbnail");
 
 // * carousel Index
 
@@ -50,11 +54,6 @@ for (let object of images) {
   }
   carouselImage(gameInfo[0], gameInfo[1], gameInfo[2]);
 }
-
-// * showing first option
-
-carouselBigItem[0].classList.remove("hidden");
-carouselBigItem[0].classList.add("select");
 
 // * function to genere carousel image
 
@@ -109,3 +108,25 @@ function changeCard(index) {
   carouselBigItem[index].classList.add("select");
   carouselBigItem[index].classList.remove("hidden");
 }
+
+// ** Thumbnails
+
+for (let object of images) {
+  createThumbnail(object.image);
+}
+
+function createThumbnail(img) {
+  const Thumbnail = document.createElement("div");
+  Thumbnail.classList.add("small-thumbnail");
+  Thumbnail.style.backgroundImage = ` url("/${img}") `;
+
+  this.addEventListener("click", function () {});
+
+  carouselSmall.append(Thumbnail);
+}
+
+// * showing first option
+
+carouselBigItem[0].classList.remove("hidden");
+carouselBigItem[0].classList.add("select");
+thumbnailItem[0].classList.add("bordered");
