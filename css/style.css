@@ -32,12 +32,16 @@
   padding: 0;
 }
 
+/* ** main */
+
 main {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+/* * carousel */
 
 .carousel-container {
   width: 80vw;
@@ -56,4 +60,16 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+/* * sliders */
+
+.slider {
+  background-color: rgba(0, 0, 0, 0);
+  height: 4rem;
+  border: none;
+}
+
+.slider i {
+  color: var(--white);
 }
